@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title>Taxa de mortalidade</title>
+</head>
+<body>
+    <script>
+        const natalidadaOuMortalidade = prompt(`
+        Escolha a taxa que você deseja calcular, digite:
+        (N) - Natalidade;
+        (M) - Mortalidade;`);
+
+        switch (natalidadaOuMortalidade){
+            case 'n':
+                const criancasNasc = parseInt(prompt("Digite o número de crianças nascidas: "));
+                const numHabitante = parseInt(prompt("Digite o número de habitantes"))
+
+                const taxaNatalidade = (criancasNasc * 1000)/numHabitante;
+
+                alert(`A taxa de natalidade é igual a ${taxaNatalidade}.`);
+                break;
+            case 'm':
+                const numObitos = parseInt(prompt("Digite o número de óbitos: "));
+                const numHabitantes = parseInt(prompt("Digite o número de habitantes"));
+
+                const taxaMortalidade = (numObitos * 1000)/numHabitantes;
+
+                alert(`A taxa de mortalidade é igual a ${taxaMortalidade}.`);
+                break;
+            default:
+                alert("Operação não realizada. Tente novamente com valores válidos.");
+        }
+    </script>
+</body>
+</html>
