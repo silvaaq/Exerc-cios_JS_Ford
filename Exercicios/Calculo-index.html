@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title>Calculo do triângulo</title>
+</head>
+<body>
+    <script>
+        const lado1 = parseFloat(prompt(` o primeiro lado do triângulo: `));
+        const lado2 = parseFloat(prompt(` o segundo lado do triângulo: `));
+        const lado3 = parseFloat(prompt(` o terceiro lado do triângulo: `));
+
+        if(lado1 == lado2 && lado2 == lado3){
+            alert("O Triângulo é Equilátero. Possui os 3 lados iguais.");
+        }
+        else if(lado1 != lado2 && lado2 != lado3 && lado1 != lado3){
+            alert("O Triângulo é Escaleno. Possui 3 lados diferentes.");
+        }
+        else{
+            alert("O Triângulo é Isóscele. Possui 2 lados iguais.")
+        }
+    </script>
+</body>
+</html>

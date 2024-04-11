@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title>Posto de gasolina</title>
+</head>
+<body>
+    <script>
+        let litros;
+        const tipoCombustivel = prompt(`Qual o tipo de combustível você deseja? 
+        Digite:
+        (G) - Gasolina; 
+        (A) - Álcool`);
+
+        
+        
+
+        switch(tipoCombustivel.toLowerCase()){
+
+            case 'a':
+
+                litros = parseFloat(prompt("Digite a quantidade de litros que você deseja comprar: "));
+                const totalAlcool = litros * 4.90;
+
+                if(litros <= 20){
+                alert(`
+                O tipo de combustivel escolhido foi álcool.
+                O desconto será de 3% por litro de álcool.
+                O valor a ser pago é igual a R$${(totalAlcool - (totalAlcool* 0.03)).toFixed(2)}.`);
+                }
+                else if(litros > 20){
+                    alert(`
+                    O tipo de combustivel escolhido foi álcool.
+                    O desconto será de 5% por litro de álcool.
+                    O valor a ser pago é igual a R$${(totalAlcool - (totalAlcool* 0.05)).toFixed(2)}.`);
+                }
+                break;
+            case 'g':
+
+                litros = parseFloat(prompt("Digite a quantidade de litros que você deseja comprar: "));
+                const totalGasolina = litros * 5.30;
+
+                if(litros <= 20){
+                alert(`
+                O tipo de combustivel escolhido foi gasolina.
+                O desconto será de 4% por litro de gasolina.
+                O valor a ser pago é igual a R$${(totalGasolina - (totalGasolina* 0.04)).toFixed(2)}.`);
+                }
+                else if(litros > 20){
+                    alert(`
+                    O tipo de combustivel escolhido foi gasolina.
+                    O desconto será de 6% por litro de gasolina.
+                    O valor a ser pago é igual a R$${(totalGasolina - (totalGasolina* 0.06)).toFixed(2)}.`);
+                }
+                break;
+            default: 
+                alert("Opção inválida, tente novamente.");
+        }
+    </script>
+</body>
+</html>

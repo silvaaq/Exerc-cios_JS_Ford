@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title> Nomes sortidos.</title>
+</head>
+<body>
+    <script>
+            const nomes = [];
+
+            for (let i =1; i<= 10; i++){
+                const nome = prompt(`Digite o ${i}º nome: `);
+                nomes.push(nome);
+            }
+            const nomeParaBuscar = prompt("Digite o nome que você deseja buscar: ");
+
+            const encontrado = nomes.includes(nomeParaBuscar);
+
+            if(encontrado){
+                alert('Achei!');
+            }
+            else{
+                alert('Não achei!');
+            }
+    </script>
+</body>
+</html>

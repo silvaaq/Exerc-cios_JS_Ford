@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title> Desconto do funcionário</title>
+</head>
+<body>
+    <script>
+        const cliente = prompt(`
+        Escolha uma opção:
+        Digite (1) - Cliente;
+        Digite (2) - Funcionário;
+        Digite (3) - Vip.`);
+        const valorCompra = parseFloat(prompt(" o valor gasto na compra: "));
+
+        switch (cliente){
+            case '1':
+                alert(`Não houve desconto. O valor a ser pago é R$${valorCompra}.`);
+                break;
+            case '2':
+                alert(`
+                Você é funcionário da loja, portanto, terá 10% de desconto. 
+                O valor do desconto é R$${valorCompra*0.1}.
+                O valor a ser pago é R$${valorCompra - (valorCompra*0.1)}.`);    
+                break;
+            case '3':
+                alert(`
+                Você é Vip, portanto, terá 5% de desconto.
+                O valor do desconto é R$${valorCompra*0.05}.
+                O valor a ser pago é R$${valorCompra - (valorCompra*0.05)}`);
+                break;
+            default:
+                alert('Valor não conhecido. Tente novamente com um valor válido.');
+                break;
+        }
+    </script>
+</body>
+</html>

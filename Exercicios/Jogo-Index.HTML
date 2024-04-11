@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title> Jogo de futebol</title>
+</head>
+<body>
+    <script>
+        const primeiroTime = prompt("Digite o nome do time mandante: ");
+        const segundoTime = prompt("Digite o nome do time visitante: ");
+
+        const placarTime1 = prompt(`Digite quantos gols o ${primeiroTime} fez no jogo: `);
+        const placarTime2 = parseInt(prompt(`Digite quantos gols o ${segundoTime} fez no jogo: `));
+
+        if(placarTime1 == placarTime2){
+            alert(`O jogo terminou empatado com o placar de ${placarTime1}X${placarTime2}.`);
+        }
+        else if(placarTime1 > placarTime2){
+            alert(`O ${primeiroTime} ganhou o jogo por ${placarTime1}X${placarTime2}.`);
+        }
+        else{
+            alert(`O ${segundoTime} ganhou o jogo por ${placarTime2}X${placarTime1}.`);
+        }
+    </script>
+</body>
+</html>

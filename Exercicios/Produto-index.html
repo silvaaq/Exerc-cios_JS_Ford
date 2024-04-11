@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amanda Silva">
+    <title> Produtos e descontos</title>
+</head>
+<body>
+    <script>
+        const nomeProduto = prompt("Digite o nome do produto: ");
+        const quantidadeProdutos = parseInt(prompt("Digite a quantidade de produtos que você deseja: "));
+        const precoUnitarioProduto = parseFloat(prompt("Digite o valor unitário do produto: "));
+
+        const total = quantidadeProdutos * precoUnitarioProduto;
+
+        if(quantidadeProdutos <= 5){
+            alert(`
+            O produto escolhido foi o(a) ${nomeProduto}.
+            A quantidade de produtos adquiridos é igual a ${quantidadeProdutos}. 
+            O preço unitário de cada produto é R$${precoUnitarioProduto}.
+            O desconto será de 2%.
+            O valor total a ser pago é: R$${total - (total*0.02)}.`);
+        }
+        else if(quantidadeProdutos > 5 && quantidadeProdutos <= 10){
+            alert(`
+            O produto escolhido foi o(a) ${nomeProduto}.
+            A quantidade de produtos adquiridos é igual a ${quantidadeProdutos}. 
+            O preço unitário de cada produto é R$${precoUnitarioProduto}.
+            O desconto será de 3%.
+            O valor total a ser pago é: R$${total - (total*0.03)}.`);
+        }
+        else if(quantidadeProdutos > 10){
+            alert(`
+            O produto escolhido foi o(a) ${nomeProduto}.
+            A quantidade de produtos adquiridos é igual a ${quantidadeProdutos}. 
+            O preço unitário de cada produto é R$${precoUnitarioProduto}.
+            O desconto será de 5%.
+            O valor total a ser pago é: R$${total - (total*0.05)}.`);
+        }
+    </script>
+</body>
+</html>
